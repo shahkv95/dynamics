@@ -2,7 +2,7 @@ body {
     margin: 0;
     overflow: hidden;
     font-family: 'Outfit', sans-serif;
-    background-color: #050505;
+    background: #050505;
     color: white;
 }
 
@@ -12,11 +12,26 @@ body {
     z-index: 0;
 }
 
+
+#ui-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pointer-events-auto {
+    pointer-events: auto;
+}
+
 /* Glass UI */
 .glass-panel {
-    background: rgba(255,255,255,0.03);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-btn {
